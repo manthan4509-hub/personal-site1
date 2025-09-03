@@ -1,418 +1,285 @@
- /* ===== CSS RESET (trimmed) ===== */
- *,
- *::before,
- *::after {
-     box-sizing: border-box;
- }
+<!DOCTYPE html>
+<html lang="en">
 
- * {
-     margin: 0;
- }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name – Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Your Name – Frontend Developer. Projects, skills, experience, and contact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
 
- /* html:focus-within {
-     scroll-behavior: smooth;
- } */
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="site">
+        <div class="container inner">
+            <a class="pill" href="#top" aria-label="Go to top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3l7 7M12 3L5 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>Your Name</span>
+            </a>
+            <nav aria-label="Primary">
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
- html,
- body {
-     height: 100%;
- }
+    <!-- ===== HERO ===== -->
+    <main id="top" class="container">
+        <section class="hero" aria-labelledby="intro-title">
+            <div>
+                <span class="pill" style="margin-bottom:.8rem;">👋 Available for work</span>
+                <h1 id="intro-title">Frontend Developer crafting fast, accessible web experiences.</h1>
+                <p class="lead">I build modern, responsive interfaces with clean HTML, CSS, and a sprinkle of JS when
+                    needed. Passionate about performance, accessibility, and delightful UX.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="#projects">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        View Projects
+                    </a>
+                    <a class="btn btn-ghost" href="#contact">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2" />
+                            <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Contact Me
+                    </a>
+                    <a class="btn" href="#" download aria-label="Download resume PDF">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 3v12m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Resume
+                    </a>
+                </div>
+            </div>
+            <div class="portrait" aria-hidden="true">
+                <!-- Decorative SVG portrait placeholder; replace with your photo if you like -->
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract portrait">
+                    <defs>
+                        <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#7c5cff" />
+                            <stop offset="100%" stop-color="#29d3a0" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="400" height="400" fill="#0b0d12" />
+                    <circle cx="200" cy="200" r="120" fill="url(#g1)" opacity="0.35" />
+                    <circle cx="180" cy="180" r="90" fill="#fff" opacity="0.06" />
+                    <path d="M150 230c0-50 100-50 100 0v20H150z" fill="#fff" opacity="0.07" />
+                    <circle cx="175" cy="180" r="10" fill="#fff" opacity=".35" />
+                    <circle cx="225" cy="180" r="10" fill="#fff" opacity=".35" />
+                </svg>
+            </div>
+        </section>
 
- body {
-     line-height: 1.5;
-     /* -webkit-font-smoothing: antialiased; */
- }
+        <!-- ===== ABOUT / SKILLS ===== -->
+        <section id="skills" aria-labelledby="skills-title">
+            <div class="section-head">
+                <h2 id="skills-title">Skills & About</h2>
+                <p class="section-desc">Core technologies I use daily and a short note on how I approach building user
+                    interfaces.</p>
+            </div>
+            <div class="about">
+                <article class="card">
+                    <h3>About Me</h3>
+                    <p style="margin-top:.5rem; color:var(--muted)">I’m a detail‑oriented developer who loves turning
+                        designs into fast, accessible, and maintainable frontends. I care about semantic HTML, scalable
+                        CSS, and measuring what matters.</p>
+                    <ul style="margin-top:.75rem; color:var(--muted)">
+                        <li>✅ Semantic, accessible markup (WCAG‑friendly)</li>
+                        <li>⚡ Performance first (LCP, CLS, TBT)</li>
+                        <li>🧩 Component‑driven, reusable UI</li>
+                        <li>🧪 Pragmatic testing & debugging</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Tech Stack</h3>
+                    <div class="stack" style="margin-top:.6rem;">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">Flexbox & Grid</span>
+                        <span class="tag">Accessibility (a11y)</span>
+                        <span class="tag">Performance</span>
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">Figma → Code</span>
+                        <span class="tag">Basic JS</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
- img,
- picture,
- video,
- canvas,
- svg {
-     display: block;
-     max-width: 100%;
- }
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" aria-labelledby="projects-title">
+            <div class="section-head">
+                <h2 id="projects-title">Selected Projects</h2>
+                <p class="section-desc">A few highlights. Replace images, titles, and links with your own work. Keep
+                    descriptions concise and impact‑focused.</p>
+            </div>
 
- input,
- button,
- textarea,
- select {
-     font: inherit;
- }
+            <div class="projects-grid">
+                <article class="project featured card">
+                    <div class="thumb" aria-hidden="true"></div>
+                    <div>
+                        <h3>Feature Project: Shop Landing</h3>
+                        <p>A modern product landing page with accessible components, fluid typography, and sub‑second
+                            LCP. Built with semantic HTML and modern CSS only.</p>
+                        <div class="stack" style="margin:.6rem 0 0.4rem;">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">a11y</span>
+                        </div>
+                        <div class="links">
+                            <a class="btn" href="#" aria-label="View live demo of Shop Landing">Live</a>
+                            <a class="btn" href="#" aria-label="View source code of Shop Landing">Code</a>
+                        </div>
+                    </div>
+                </article>
 
- p,
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-     overflow-wrap: anywhere;
- }
+                <article class="project card">
+                    <div class="thumb" aria-hidden="true"></div>
+                    <div>
+                        <h3>Dashboard Widgets</h3>
+                        <p>Responsive cards layout with grid auto‑fit, focus states, and reduced‑motion friendly
+                            animations.</p>
+                        <div class="stack" style="margin:.6rem 0 0.4rem;">
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Animations</span>
+                        </div>
+                        <div class="links">
+                            <a class="btn" href="#">Live</a>
+                            <a class="btn" href="#">Code</a>
+                        </div>
+                    </div>
+                </article>
 
- /* ===== THEME ===== */
- :root {
-     --bg: #0b0d12;
-     --panel: #111520;
-     --text: #e8ebf2;
-     --muted: #a7b0c0;
-     --brand: #7c5cff;
-     /* accent */
-     --brand-2: #29d3a0;
-     /* secondary accent */
-     --border: #1b2232;
-     --shadow: 0 10px 30px rgba(0, 0, 0, .35);
-     --radius: 16px;
-     --maxw: 1100px;
- }
+                <article class="project card">
+                    <div class="thumb" aria-hidden="true"></div>
+                    <div>
+                        <h3>Marketing Section</h3>
+                        <p>Hero + features section with fluid type, color contrast checks, and keyboard accessible
+                            buttons.</p>
+                        <div class="stack" style="margin:.6rem 0 0.4rem;">
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                        <div class="links">
+                            <a class="btn" href="#">Live</a>
+                            <a class="btn" href="#">Code</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
- @media (prefers-color-scheme: light) {
-     :root {
-         --bg: #f6f8fb;
-         --panel: #ffffff;
-         --text: #0f172a;
-         --muted: #475569;
-         --border: #e5e7eb;
-         --shadow: 0 10px 30px rgba(2, 6, 23, .08);
-     }
- }
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" aria-labelledby="exp-title">
+            <div class="section-head">
+                <h2 id="exp-title">Experience</h2>
+                <p class="section-desc">Showcase impact with metrics. Keep bullets short and action‑oriented (STAR
+                    format works great).</p>
+            </div>
+            <div class="card timeline">
+                <article class="job">
+                    <h4>Frontend Developer – Company Name</h4>
+                    <p class="meta">Jan 2024 – Present • Remote</p>
+                    <ul style="color:var(--muted); margin-top:.35rem;">
+                        <li>Shipped responsive design system; reduced CSS by 35% and improved LCP by 28%.</li>
+                        <li>Led accessibility audit; fixed 40+ issues to meet WCAG AA.</li>
+                    </ul>
+                </article>
+                <article class="job">
+                    <h4>Web Developer – Agency</h4>
+                    <p class="meta">Jun 2022 – Dec 2023 • Bangalore</p>
+                    <ul style="color:var(--muted); margin-top:.35rem;">
+                        <li>Built and maintained marketing sites with 99.9% uptime and <1s TTFB.</li>
+                        <li>Collaborated with designers to deliver pixel‑perfect pages using Grid & Flexbox.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
- body {
-     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-     background: radial-gradient(1100px 500px at 80% -100px, rgba(124, 92, 255, .25), transparent 60%),
-         radial-gradient(800px 400px at 10% -50px, rgba(41, 211, 160, .15), transparent 60%),
-         var(--bg);
-     color: var(--text);
- }
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" aria-labelledby="contact-title">
+            <div class="section-head">
+                <h2 id="contact-title">Contact</h2>
+                <p class="section-desc">Say hi! This static form uses a mailto link by default. Replace with your
+                    backend/API when ready.</p>
+            </div>
+            <div class="card">
+                <form action="mailto:you@example.com" method="post" enctype="text/plain">
+                    <div class="row">
+                        <div class="field" style="flex:1 1 260px;">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your name" required />
+                        </div>
+                        <div class="field" style="flex:1 1 260px;">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="What would you like to build?"
+                            required></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit">Send</button>
+                        <button class="btn" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
- a {
-     color: inherit;
-     text-decoration: none;
- }
+    <!-- ===== FOOTER ===== -->
+    <footer class="container" role="contentinfo">
+        <div class="row" style="justify-content:space-between; align-items:center;">
+            <p>© <span id="year"></span> Your Name</p>
+            <div class="row" role="list" aria-label="Social links">
+                <a class="pill" role="listitem" href="#" aria-label="GitHub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.76.09-.75.09-.75 1.22.09 1.86 1.26 1.86 1.26 1.08 1.86 2.84 1.32 3.53 1 .11-.79.42-1.32.76-1.62-2.66-.3-5.46-1.33-5.46-5.91 0-1.31.47-2.38 1.25-3.22-.13-.3-.54-1.51.12-3.15 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0C17.4 5.9 18.4 6.22 18.4 6.22c.66 1.64.25 2.85.12 3.15.78.84 1.25 1.91 1.25 3.22 0 4.6-2.8 5.6-5.48 5.9.43.37.81 1.1.81 2.22v3.3c0 .32.21.7.82.58A12 12 0 0012 .5z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a class="pill" role="listitem" href="#" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.05c.53-1 1.84-2.1 3.8-2.1 4.06 0 4.8 2.67 4.8 6.15V24h-4v-6.6c0-1.58-.03-3.62-2.2-3.62-2.2 0-2.53 1.72-2.53 3.5V24h-4V8.5z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a class="pill" role="listitem" href="mailto:you@example.com" aria-label="Email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M4 4h16v16H4z" />
+                        <path d="M4 7l8 6 8-6" fill="#0000" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 
- .container {
-     width: min(100% - 2rem, var(--maxw));
-     margin-inline: auto;
- }
+    <script>
+        // Small nicety: current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
 
- .pill {
-     display: inline-flex;
-     gap: .5rem;
-     align-items: center;
-     padding: .35rem .7rem;
-     border: 1px solid var(--border);
-     border-radius: 999px;
-     background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(0, 0, 0, .03));
-     color: var(--muted);
-     font-weight: 600;
-     font-size: .85rem;
- }
-
- .btn {
-     display: inline-flex;
-     align-items: center;
-     gap: .5rem;
-     padding: .8rem 1rem;
-     border: 1px solid var(--border);
-     border-radius: 12px;
-     background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(0, 0, 0, .06));
-     box-shadow: var(--shadow);
-     font-weight: 700;
- }
-
- .btn:hover {
-     transform: translateY(-1px);
- }
-
- .btn-primary {
-     background: linear-gradient(135deg, var(--brand), #5a44ff);
-     color: white;
-     border: 0;
- }
-
- .btn-ghost {
-     background: transparent;
- }
-
- .row {
-     display: flex;
-     gap: 1rem;
-     flex-wrap: wrap;
- }
-
- header.site {
-     position: sticky;
-     top: 0;
-     z-index: 50;
-     backdrop-filter: saturate(140%) blur(8px);
-     border-bottom: 1px solid var(--border);
-     background: color-mix(in oklab, var(--bg) 85%, transparent);
- }
-
- header .inner {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: .8rem 0;
- }
-
- nav a {
-     padding: .6rem .8rem;
-     border-radius: 10px;
-     color: var(--muted);
-     font-weight: 600;
- }
-
- nav a:hover,
- nav a:focus {
-     color: var(--text);
-     background: rgba(124, 92, 255, .12);
- }
-
- /* ===== HERO ===== */
- .hero {
-     padding: 5rem 0 3.5rem;
-     display: grid;
-     gap: 2rem;
-     align-items: center;
-     grid-template-columns: 1.2fr .8fr;
- }
-
- .hero h1 {
-     font-size: clamp(2rem, 5vw, 3.2rem);
-     line-height: 1.05;
- }
-
- .hero p.lead {
-     font-size: clamp(1.05rem, 2.4vw, 1.2rem);
-     color: var(--muted);
-     margin-top: 1rem;
- }
-
- .hero .actions {
-     margin-top: 1.5rem;
-     display: flex;
-     gap: .8rem;
-     flex-wrap: wrap;
- }
-
- .portrait {
-     aspect-ratio: 1/1;
-     border-radius: 24px;
-     border: 1px solid var(--border);
-     overflow: hidden;
-     background: linear-gradient(135deg, rgba(124, 92, 255, .25), rgba(41, 211, 160, .25));
-     box-shadow: var(--shadow);
- }
-
- .portrait svg {
-     width: 100%;
-     height: 100%;
- }
-
- /* ===== SECTIONS ===== */
- section {
-     padding: 3.5rem 0;
- }
-
- .section-head {
-     margin-bottom: 1.5rem;
-     display: flex;
-     align-items: end;
-     justify-content: space-between;
-     gap: 1rem;
- }
-
- .section-head h2 {
-     font-size: clamp(1.4rem, 3.2vw, 2rem);
- }
-
- .section-desc {
-     color: var(--muted);
-     max-width: 60ch;
- }
-
- /* ===== ABOUT ===== */
- .about {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 1.5rem;
- }
-
- .card {
-     background: var(--panel);
-     border: 1px solid var(--border);
-     border-radius: var(--radius);
-     padding: 1.25rem;
-     box-shadow: var(--shadow);
- }
-
- .stack {
-     display: flex;
-     flex-wrap: wrap;
-     gap: .5rem;
- }
-
- .tag {
-     padding: .35rem .6rem;
-     border: 1px solid var(--border);
-     border-radius: 999px;
-     background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(0, 0, 0, .04));
-     font-weight: 600;
-     font-size: .85rem;
-     color: var(--muted);
- }
-
- /* ===== PROJECTS ===== */
- .projects-grid {
-     display: grid;
-     grid-template-columns: repeat(12, 1fr);
-     gap: 1rem;
- }
-
- .project {
-     grid-column: span 12;
-     display: flex;
-     flex-direction: column;
-     gap: .8rem;
- }
-
- @media (min-width: 700px) {
-     .project {
-         grid-column: span 6;
-     }
-
-     .project.featured {
-         grid-column: span 12;
-         display: grid;
-         grid-template-columns: 1.1fr .9fr;
-         align-items: center;
-     }
- }
-
- .thumb {
-     aspect-ratio: 16/10;
-     border-radius: 14px;
-     overflow: hidden;
-     border: 1px solid var(--border);
-     background: linear-gradient(135deg, rgba(124, 92, 255, .25), rgba(41, 211, 160, .25));
- }
-
- .project h3 {
-     font-size: 1.15rem;
- }
-
- .project p {
-     color: var(--muted);
- }
-
- .project .links {
-     display: flex;
-     gap: .6rem;
- }
-
- /* ===== EXPERIENCE ===== */
- .timeline {
-     position: relative;
-     padding-left: 1.25rem;
- }
-
- .timeline::before {
-     content: "";
-     position: absolute;
-     left: .35rem;
-     top: .35rem;
-     bottom: .35rem;
-     width: 2px;
-     background: linear-gradient(var(--brand), var(--brand-2));
-     border-radius: 2px;
- }
-
- .job {
-     position: relative;
-     margin-bottom: 1rem;
-     padding-left: .5rem;
- }
-
- .job::before {
-     content: "";
-     position: absolute;
-     left: -.85rem;
-     top: .25rem;
-     width: .9rem;
-     height: .9rem;
-     border-radius: 999px;
-     background: var(--panel);
-     border: 2px solid var(--brand);
-     box-shadow: var(--shadow);
- }
-
- .job h4 {
-     font-size: 1rem;
- }
-
- .job .meta {
-     color: var(--muted);
-     font-weight: 600;
- }
-
- /* ===== CONTACT ===== */
- form {
-     display: grid;
-     gap: .8rem;
-     grid-template-columns: 1fr;
- }
-
- .field {
-     display: grid;
-     gap: .35rem;
- }
-
- label {
-     font-weight: 700;
-     color: var(--muted);
- }
-
- input,
- textarea {
-     background: var(--panel);
-     border: 1px solid var(--border);
-     border-radius: 12px;
-     padding: .8rem .9rem;
-     color: var(--text);
- }
-
- textarea {
-     min-height: 140px;
-     resize: vertical;
- }
-
- /* ===== FOOTER ===== */
- footer {
-     padding: 2.5rem 0 4rem;
-     color: var(--muted);
-     border-top: 1px solid var(--border);
- }
-
- /* ===== UTIL ===== */
- .sr-only {
-     position: absolute;
-     width: 1px;
-     height: 1px;
-     padding: 0;
-     margin: -1px;
-     overflow: hidden;
-     clip: rect(0, 0, 0, 0);
-     white-space: nowrap;
-     border: 0;
- }
-
- /* ===== RESPONSIVE ===== */
- @media (max-width: 900px) {
-     .hero {
-         grid-template-columns: 1fr;
-     }
-
-     .about {
-         grid-template-columns: 1fr;
-     }
- }
+</html>
